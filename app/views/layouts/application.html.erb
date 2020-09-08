@@ -12,7 +12,12 @@
 
   <body>
     <header>
-
+      <a href="/" class="logo"></a>
+      <% if @current_user %>
+      <%= react_component("HeaderUser") %>
+      <% else %>
+      <%= react_component("HeaderGuest") %>
+      <% end %>
     </header>
     <%= yield %>
     <footer>
