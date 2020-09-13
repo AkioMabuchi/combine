@@ -14,7 +14,7 @@
     <header>
       <a href="/" class="logo"></a>
       <% if @current_user %>
-      <%= react_component("HeaderUser") %>
+      <%= react_component("HeaderUser", {user: @current_user.as_json(only:[:name, :image])}) %>
       <% else %>
       <%= react_component("HeaderGuest") %>
       <% end %>

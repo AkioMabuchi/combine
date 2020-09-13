@@ -14,6 +14,15 @@
   }
 }
 
+a{
+  color: #0080FF;
+  text-decoration: none;
+  &:hover{
+    color: #3399FF;
+    text-decoration: none;
+  }
+}
+
 button{
   background-color: transparent;
   border: none;
@@ -25,6 +34,41 @@ button{
 
 body{
   padding-top: 60px;
+}
+
+h1{
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  line-height: 40px;
+  font-size: 36px;
+  font-weight: 100;
+  text-align: center;
+}
+
+h2{
+  margin: 0;
+  padding: 0;
+}
+
+h3{
+  margin: 0;
+  padding: 0;
+}
+
+h4{
+  margin: 0;
+  padding: 0;
+}
+
+h5{
+  margin: 0;
+  padding: 0;
+}
+
+h6{
+  margin: 0;
+  padding: 0;
 }
 
 header{
@@ -92,11 +136,49 @@ header{
       height: 100px;
     }
     &.open-menu-user{
-      height: 100px;
+      height: 500px;
     }
     .pull-down-user{
       margin: 10px;
+      padding: 10px;
       background-color: #99004D;
+      .pull-down-user-user{
+        height: 60px;
+        position: relative;
+        img{
+          display: block;
+          width: 50px;
+          height: 50px;
+          border-radius: 25px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        .name{
+          line-height: 30px;
+          color: white;
+          position: absolute;
+          top: 10px;
+          left: 60px;
+        }
+      }
+      .pull-down-user-list{
+        height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        a{
+          line-height: 30px;
+          font-size: 18px;
+          font-weight: 200;
+          color: white;
+        }
+        button{
+          line-height: 30px;
+          font-size: 18px;
+          font-weight: 200;
+          color: white;
+        }
+      }
     }
   }
 }

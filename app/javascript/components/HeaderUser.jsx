@@ -23,12 +23,22 @@ class HeaderUser extends React.Component {
                 </button>
                 <div className={`pull-down-menu ${this.state.pullDownMenu}`}>
                     <div className={'pull-down-user'}>
-                        <a href={'/settings'}>プロフィール設定</a>
-                        <form action={'/logout'} method={'post'}>
-                            <button type={'submit'}>
-                                ログアウト
-                            </button>
-                        </form>
+                        <div className={'pull-down-user-user'}>
+                            <img src={this.props.user.image.url} alt={''}/>
+                            <div className={'name'}>
+                                {this.props.user.name}
+                            </div>
+                        </div>
+                        <div className={'pull-down-user-list'}>
+                            <a href={'/settings'}>プロフィール設定</a>
+                        </div>
+                        <div className={'pull-down-user-list'}>
+                            <form action={'/logout'} method={'post'}>
+                                <button type={'submit'}>
+                                    ログアウト
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

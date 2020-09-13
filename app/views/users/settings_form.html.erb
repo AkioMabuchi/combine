@@ -1,5 +1,18 @@
 <h1>アカウント設定</h1>
-
+<form action="/settings/update/profile" method="post" enctype="multipart/form-data" class="setting-form">
+  <h2>プロフィール設定</h2>
+  <h3 style="margin-top: 10px">ユーザー画像</h3>
+  <h5>1MB以内のgif、png、jpgファイル（400x400推奨）</h5>
+  <%= react_component("SettingProfileImage", {userImage: @current_user.image.url}) %>
+  <h3 style="margin-top: 30px">ユーザー固有ID<small>（必須、英数字および「-」のみ）</small></h3>
+  <input type="text" name="permalink">
+  <h3 style="margin-top: 20px">ユーザー名<small>（必須）</small></h3>
+  <input type="text" name="name">
+  <h3 style="margin-top: 20px">自己紹介<small>（400字以内）</small></h3>
+  <textarea  name="description"></textarea>
+  <h3 style="margin-top: 20px">ホームページ</h3>
+  <input type="url">
+</form>
 <% if @is_admin %>
   <p>このアカウントには管理者権限があります</p>
 <% end %>

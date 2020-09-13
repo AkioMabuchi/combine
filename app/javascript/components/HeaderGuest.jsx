@@ -23,7 +23,9 @@ class HeaderGuest extends React.Component {
                 </button>
                 <div className={`pull-down-menu ${this.state.pullDownMenu}`}>
                     <div className={'pull-down-user'}>
-                        <a href={'/signup'}>ログイン</a>
+                        <div className={'pull-down-user-list'}>
+                            <a href={'/signup'}>ログイン</a>
+                        </div>
                     </div>
                 </div>
             </div>
